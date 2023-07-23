@@ -1,0 +1,8 @@
+.TaskForm {
+  position: fixed;
+  right: 0px;
+  bottom: 0px;
+  height: 90vh;
+  width: 60vw;
+  background-color: #ecf3f7;
+}

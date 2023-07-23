@@ -1,0 +1,12 @@
+.buttonCreate {
+  width: 180px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: #008cf0;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 300;
+  border: 0px;
+  margin: 25px 0px 23px 262px;
+  cursor: pointer;
+}
