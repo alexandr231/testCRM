@@ -2,7 +2,296 @@
   position: fixed;
   right: 0px;
   bottom: 0px;
-  height: 785px;
+  height: calc(100vh - 65px);
   width: 975px;
   background-color: #ecf3f7;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.TaskForm::-webkit-scrollbar {
+  display: none;
+}
+
+.Header {
+  height: 60px;
+  background-color: #1a4876;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 31px 0 37px;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.CloseIcon {
+  cursor: pointer;
+}
+
+.CreateMainContent {
+  padding: 55px 0 0 37px;
+  color: #9f9ea7;
+  font-size: 14px;
+  font-weight: 300;
+  display: flex;
+  flex-direction: column;
+}
+
+.CreateMainContent p {
+  margin-left: 5px;
+}
+
+.CreateMainContent textarea {
+  border: none;
+  margin: 15px 0 22px 0;
+  border-radius: 5px;
+  background-color: #f9f9fa;
+  border: 1px solid #e8e8e8;
+  text-align: left;
+  padding: 5px;
+  resize: none;
+  outline: none;
+}
+
+.CreateMainContent:focus {
+  outline: none;
+}
+
+.NameTextarea {
+  height: 85px;
+  width: 100%;
+  max-width: 625px;
+}
+
+.DescriptionTextarea {
+  max-width: 625px;
+  width: 100%;
+  height: 134px;
+}
+
+.ButtonSaveCreate {
+  width: 150px;
+  height: 36px;
+  margin: 74px 0 0 6px;
+  border-radius: 20px;
+  background-color: #008cf0;
+  border: 0;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.HeaderContent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  max-height: 36px;
+}
+
+.EditFormId {
+  white-space: nowrap;
+}
+
+.EditFormName {
+  max-width: 560px;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 300;
+  margin-left: 25px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* number of lines to show */
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.EditMainContent {
+  display: grid;
+  grid-template-columns: 1fr 239px;
+  height: 100%;
+}
+
+.EditMainContent textarea:focus {
+  outline: none;
+}
+
+.EditColumn1 {
+  display: flex;
+  flex-direction: column;
+  padding: 28px 33px 0 30px;
+  border-right: 1px solid #d7dce0;
+}
+
+.ButtonSaveEdit {
+  width: 150px;
+  height: 36px;
+  border-radius: 20px;
+  background-color: #008cf0;
+  border: 0;
+  color: #ffffff;
+  cursor: pointer;
+  margin-bottom: 44px;
+}
+
+.Label {
+  padding-left: 8px;
+  color: #9f9ea7;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.DescriptionEdit {
+  height: 117px;
+  width: 100%;
+  margin-top: 15px;
+  padding-left: 9px;
+  margin-bottom: 10px;
+  color: #060606;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.AddComment {
+  height: 74px;
+  margin: 5px 0 5px 9px;
+  width: 100%;
+  border: none;
+  background-color: transparent;
+  text-align: left;
+  padding: 5px;
+  resize: none;
+}
+
+.CommentBlock {
+  display: flex;
+  flex-direction: row;
+  height: 170px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.userPic {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #c5cdd3;
+  background-color: #f5f5f5;
+  border-radius: 20px;
+  margin-right: 11px;
+}
+
+.CommentUserName {
+  margin: 11px 0 12px 0;
+  color: #525460;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.CommentDate {
+  color: #63677c;
+  font-size: 12px;
+  font-weight: 400;
+  margin-bottom: 18px;
+}
+
+.Comment {
+  width: 100%;
+  height: 100px;
+  padding: 10px 60px 10px 10px;
+  background-color: #e3e9f4;
+  border-radius: 5px;
+  color: #060606;
+  font-size: 14px;
+  font-weight: 400;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.Comment::-webkit-scrollbar {
+  display: none;
+}
+
+.width100 {
+  width: 100%;
+}
+
+.EditColumn2 {
+  display: flex;
+  flex-direction: column;
+  padding: 28px;
+}
+
+.EditFormStatus {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 11px;
+  margin-bottom: 39px;
+  color: #525460;
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.StatusCircle {
+  width: 11px;
+  height: 11px;
+  border-radius: 6px;
+}
+
+.Column2Label {
+  color: #a09fa8;
+  font-size: 14px;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+.Column2Text {
+  color: #030303;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.Column2Text.name {
+  margin-bottom: 52px;
+}
+
+.Column2Text.created {
+  margin-bottom: 32px;
+}
+
+.Column2Text.executor {
+  margin-bottom: 32px;
+  color: #1974d2;
+  cursor: pointer;
+}
+
+.Column2Text.priority {
+  margin-bottom: 35px;
+}
+
+.Column2Text.time {
+  margin-bottom: 35px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 7px;
+}
+
+.TaskTag {
+  width: fit-content;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  padding: 0 11px 0 10px;
+  color: #9da1aa;
+  font-size: 12px;
+  font-weight: 300;
+  border-radius: 10px;
+  border: 1px solid #9da1aa;
+  background-color: #ffffff;
+  justify-content: center;
+  margin-bottom: 5px;
 }

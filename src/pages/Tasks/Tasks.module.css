@@ -1,3 +1,7 @@
+.TasksPage {
+  height: calc(100vh - 65px);
+}
+
 .buttonCreate {
   width: 180px;
   height: 40px;

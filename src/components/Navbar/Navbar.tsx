@@ -13,7 +13,7 @@ import {
   HOME_ROUTE,
   KNOWLEDGE_ROUTE,
   SETTINGS_ROUTE,
-  STAFF_ROUTE,
+  USERS_ROUTE,
 } from '../../utils/routeConstants';
 
 const Navbar = () => {
@@ -40,10 +40,10 @@ const Navbar = () => {
           <p>Заявки</p>
         </div>
       </Link>
-      <Link to={STAFF_ROUTE}>
+      <Link to={USERS_ROUTE}>
         <div
           className={
-            pathname === STAFF_ROUTE ? `${styles.NavButton} ${styles.active}` : styles.NavButton
+            pathname === USERS_ROUTE ? `${styles.NavButton} ${styles.active}` : styles.NavButton
           }>
           <img src={Staff} alt="Staff icon" />
           <p>Сотрудники</p>

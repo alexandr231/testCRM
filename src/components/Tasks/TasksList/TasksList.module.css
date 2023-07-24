@@ -2,7 +2,7 @@
   overflow-y: scroll;
   -ms-overflow-style: none;
   scrollbar-width: none;
-  height: 100%;
+  height: calc(100vh - 153px);
 }
 
 .tasksList::-webkit-scrollbar {
@@ -17,12 +17,14 @@
   font-size: 16px;
   font-weight: 300;
   border-bottom: 1px solid #dae0e7;
+  cursor: pointer;
 }
 
 .taskRow.title {
   height: 33px;
   padding-bottom: 11px;
   font-weight: 400;
+  cursor: default;
 }
 .Column1 {
   display: flex;
@@ -94,15 +96,18 @@
   border-radius: 11px;
   height: 22px;
   max-width: 100px;
-  overflow: hidden;
-  word-break: break-all;
-  white-space: nowrap;
-  text-overflow: ellipsis;
   font-size: 12px;
-  text-align: center;
-  padding: 0 20px;
+  padding: 0 16px;
   color: #ffffff;
   display: flex;
   align-items: center;
-  justify-content: center;
+}
+
+.statusText {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1; /* number of lines to show */
+  line-clamp: 1;
+  -webkit-box-orient: vertical;
 }

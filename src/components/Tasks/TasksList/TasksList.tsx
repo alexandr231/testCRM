@@ -1,11 +1,15 @@
 import { useSelector } from 'react-redux';
 import styles from './TasksList.module.css';
 import { RootState, useAppDispatch } from '../../../redux/store';
-import { useEffect } from 'react';
+import { FC, useEffect } from 'react';
 import { fetchTasks } from '../../../redux/TasksSlice/slice';
 import Task from './Task/Task';
 
-const TasksList = () => {
+type TasksListProps = {
+  handleTaskEdit: (id: number) => void;
+};
+
+const TasksList: FC<TasksListProps> = ({ handleTaskEdit }) => {
   const dispatch = useAppDispatch();
 
   const tasks = useSelector((state: RootState) => state.tasks.tasks);
@@ -38,6 +42,9 @@ const TasksList = () => {
           statusId={task.statusId}
           executorName={task.executorName}
           key={task.id}
+          handleTaskEdit={() => {
+            handleTaskEdit(task.id);
+          }}
         />
       ))}
     </div>

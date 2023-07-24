@@ -12,6 +12,13 @@ type TasksResponseType = {
   value: TaskType[];
 };
 
+export type EditedTaskType = {
+  id: number;
+  comment?: string;
+  statusId: number;
+  executorId: number;
+};
+
 export const TasksAPI = {
   getTasks() {
     return host
@@ -33,13 +40,12 @@ export const TasksAPI = {
       description,
     });
   },
-  editTask(id: number, comment: string, statusId: number, priorityId: number, executorId: number) {
+  editTask(editedTask: EditedTaskType) {
     return host.put(`api/${guid}/Tasks`, {
-      id,
-      comment,
-      statusId,
-      priorityId,
-      executorId,
+      id: editedTask.id,
+      comment: editedTask.comment,
+      statusId: editedTask.statusId,
+      executorId: editedTask.executorId,
     });
   },
 };

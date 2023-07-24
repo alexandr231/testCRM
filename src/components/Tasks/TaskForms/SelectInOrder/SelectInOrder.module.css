@@ -1,0 +1,31 @@
+.List {
+  color: #030303;
+  font-size: 14px;
+  font-weight: 300;
+  margin-bottom: 10px;
+  max-height: 150px;
+  border: 1px solid #d7dce0;
+  overflow-y: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.List::-webkit-scrollbar {
+  display: none;
+}
+
+.Item {
+  padding: 8px;
+  border-bottom: 1px solid #d7dce0;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 11px;
+}
+
+.StatusCircle {
+  width: 11px;
+  height: 11px;
+  border-radius: 6px;
+}
