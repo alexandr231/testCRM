@@ -71,7 +71,7 @@ const TaskEdit: FC<TaskEditProps> = ({ handleCloseForm }) => {
     <div className={styles.TaskForm}>
       <div className={styles.Header}>
         <div className={styles.HeaderContent}>
-          <p className={styles.EditFormId}>№ {TaskEditData?.id}</p>
+          <p className={styles.EditFormId}>№ {TaskEditData?.id.toLocaleString()}</p>
           <p className={styles.EditFormName}>{TaskEditData?.name}</p>
         </div>
         <img
@@ -152,11 +152,13 @@ const TaskEdit: FC<TaskEditProps> = ({ handleCloseForm }) => {
             <p>{getResolutionDate()}</p>
           </div>
           <p className={styles.Column2Label}>Теги</p>
-          {TaskEditData?.tags.map((tag) => (
-            <div className={styles.TaskTag} key={tag.id}>
-              {tag.name}
-            </div>
-          ))}
+          <div className={styles.tagsBlock}>
+            {TaskEditData?.tags.map((tag) => (
+              <div className={styles.TaskTag} key={tag.id}>
+                {tag.name}
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>

@@ -26,11 +26,14 @@
 
 .Search input:focus {
   outline: none;
-  caret-color: transparent;
 }
 
 .Search input::placeholder {
   color: #c0cbda;
+}
+
+.Search input:focus::placeholder {
+  color: transparent;
 }
 
 .Search img {

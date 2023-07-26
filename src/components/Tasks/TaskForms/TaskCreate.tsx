@@ -19,6 +19,8 @@ const TaskCreate: FC<TaskCreateProps> = ({ handleCloseForm }) => {
         dispatch(fetchTasks());
         handleCloseForm();
       });
+    } else {
+      alert('Заполните оба поля!');
     }
   };
 

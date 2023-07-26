@@ -25,7 +25,7 @@ const Task: FC<TaskPropsType> = ({
     <div className={styles.taskRow} onClick={handleTaskEdit}>
       <div className={styles.Column1}>
         <p className={styles.taskId} style={{ borderLeft: `5px solid ${priority?.rgb}` }}>
-          {id}
+          {id.toLocaleString()}
         </p>
       </div>
       <div className={styles.Column2}>
